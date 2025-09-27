@@ -116,6 +116,10 @@ p {
   overflow: hidden;
 }
 
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .card-img {
   /* TODO: Add card image styles */
   /* HINT: Set width, height, and object-fit */
@@ -193,6 +197,27 @@ p {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+/* Add disabled button styling */
+.btn:disabled {
+  background-color: var(--light-gray);
+  color: var(--gray);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Add focus states for accessibility */
+.btn:focus,
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+/* Add basic hover effects */
+.btn:hover:not(:disabled) {
+  opacity: 0.9;
 }
 
 /* Chip Styles */
@@ -1304,4 +1329,13 @@ input:checked + .slider-round:before {
 
 .dark-theme .instruction-section p:last-child {
   background-color: rgba(76, 201, 240, 0.1);
+}
+
+/* Add consistent spacing system */
+.section > * {
+  margin-bottom: 1rem;
+}
+
+.section > *:last-child {
+  margin-bottom: 0;
 }
